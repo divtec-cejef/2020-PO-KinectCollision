@@ -13,15 +13,22 @@
 ## Ajouter un squelette
 
 Il faut récupérer le squelette présent dans la démo du package précédement installé en ouvrant la scene "KinectAvatarsDemo4" présente dans Assets > K2Exemples > KinectDemos > AvatarsDemo
+
 ![GitHub Logo](/img/KinectAvatarsDemo4.png)
+
 Copier l'objet "KinectController" et le coller dans votre scène (pour revenir à votre scene de départ > File > Open Scene > Scenes > SampleScene.unity)
 Pour ajouter un personnage a votre squelette, cliquez sur l'objet "KinectController", dans le script "User Avatar Matcher" séléctionnez le personnage voulu dans "Avatar Model" (ici je choisis "Robot")
+
 ![GitHub Logo](/img/choisirSkin.png)
+
 Double-cliquez sur l'élément Robot dans "Avatar Model" pour trouver sa source et glissez le dans votre hiérarchie
-![GitHub Logo](/img/elementhierarchie.png.png)
+
+![GitHub Logo](/img/elementhierarchie.png)
+
 Ce nouvel object Robot vous permettra de gérer les futures collisions.
 Vous pouvez le rendre invisible en décochant la case à côté de son nom pour évitez qui vous dérange lors des phase de jeu
-![GitHub Logo](/img/uncheck.png.png)
+
+![GitHub Logo](/img/uncheck.png)
 
 Si vous lancer votre projet, un personnage reproduisant vos mouvements devrait maintenant apparaître.
 
