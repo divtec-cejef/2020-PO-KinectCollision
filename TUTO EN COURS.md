@@ -43,7 +43,9 @@ Sélectionnez votre cube et dans l'inspecteur, cliquez sur "Add Component" > Box
 ![GitHub Logo](/img/boxcollider.png)
 
 Dans le dossier "Assets", créez un nouveau dossier "Material", il contiendra les deux couleurs que le cube peu avoir.
+
 Clique droit dans le dossier "Material" > Create > Material, donnez lui une couleur bleu.
+
 Dupliquez le matérial bleu puis donnez lui la couleur rouge (n'oubliez pas de bien renommer vos nouveau material !).
 
 Glissez votre nouveau material bleu sur votre cube précédemment créé, puis dupliquez votre cube.
@@ -67,6 +69,7 @@ Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
 ## Gérer les collisions
 
 Avant de gérer les collisions il faut comprendre les collisions !
+
 les poignets sont des "déclancheurs" (c'est eux qui vont toucher des choses) et les cubes sont des "déclanchés" (il font quelque chose s'ils sont touché ou non).
 
 
