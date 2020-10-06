@@ -25,8 +25,6 @@ Installer les outils suivant :
 * [Unity 2019.4.8f](https://unity3d.com/fr/get-unity/download/archive)
 * Visual Studio Community 2019 (à installer en même temps)
 * Les packages suivant
-  * [Volumetric Lines 3.0.2](https://assetstore.unity.com/packages/tools/particles-effects/volumetric-lines-29160)
-  * [ProBuilder v4.2.3](https://unity3d.com/fr/unity/features/worldbuilding/probuilder)
   * [Free MatCap Shaders 1.4.0.0](https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221)
 
 ## Introduction
