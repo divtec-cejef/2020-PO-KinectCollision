@@ -32,9 +32,47 @@ Vous pouvez le rendre invisible en décochant la case à côté de son nom pour 
 
 Si vous lancer votre projet, un personnage reproduisant vos mouvements devrait maintenant apparaître.
 
+## Créer les objets
+
+Pour cet exemple vous allez créez deux cubes de couleur bleu, dès que une des mains du joueur entre en contact avec un des cube, il devient rouge, et s'il enlève sa main, il redevient bleu.
+
+Créez un cubes (Clique droit dans la hérarchie > new 3D object > 3D Cube)
+
+Sélectionnez votre cube et dans l'inspecteur, cliquez sur "Add Component" > Box Collider et cochez "is Trigger" pour le définir comme "déclanché"
+
+![GitHub Logo](/img/boxcollider.png)
+
+Dans le dossier "Assets", créez un nouveau dossier "Material", il contiendra les deux couleurs que le cube peu avoir.
+Clique droit dans le dossier "Material" > Create > Material, donnez lui une couleur bleu.
+Dupliquez le matérial bleu puis donnez lui la couleur rouge (n'oubliez pas de bien renommer vos nouveau material !).
+
+Glissez votre nouveau material bleu sur votre cube précédemment créé, puis dupliquez votre cube.
+
+Vous avez miantenant deux cubes bleus, un sera à gauche, un à droite.
+
+![GitHub Logo](/img/checkpoint1.png)
+
+vous allez ensuite donner un box collider au deux poignet du Robot
+
+pour ce faire, sélectionner le poignet (wrist) du Robot et Add component > Box Collider.
+
+![GitHub Logo](/img/robotwrist.png)
+
+Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
+
+![GitHub Logo](/img/rigid.png)
+
+**Création des objets terminée**
+
 ## Gérer les collisions
 
-Avant de gérer les collision ils faut comprendre les collisions et c'est assez simple :
-d'un côté il y a l'object déclancheur et l'object déclanché, si le déclancheur touche l'objet déclanché alors il se passe quelque chose.
+Avant de gérer les collisions il faut comprendre les collisions !
+les poignets sont des "déclancheurs" (c'est eux qui vont toucher des choses) et les cubes sont des "déclanchés" (il font quelque chose s'ils sont touché ou non).
+
+
+
+
+
+
 
 
