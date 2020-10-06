@@ -50,7 +50,7 @@ Dupliquez le matérial bleu puis donnez lui la couleur rouge (n'oubliez pas de b
 
 Glissez votre nouveau material bleu sur votre cube précédemment créé, puis dupliquez votre cube.
 
-Vous avez miantenant deux cubes bleus, un sera à gauche, un à droite.
+Vous avez maintenant deux cubes bleus, un sera à gauche, un à droite.
 
 ![GitHub Logo](/img/checkpoint1.png)
 
@@ -72,10 +72,47 @@ Avant de gérer les collisions il faut comprendre les collisions !
 
 les poignets sont des "déclancheurs" (c'est eux qui vont toucher des choses) et les cubes sont des "déclanchés" (il font quelque chose s'ils sont touché ou non).
 
+Tout ça se gère via un script.
+
+Dans votre dossier "Assets", clique-droit > create > C# script et nommez-le "collision".
+
+Ouvrez-le (il devrait s'ouvrir avec visual studio !).
+
+Supprimez les fonction Start et Update.
+
+Créez deux variables qui représenteront les deux coloris des cubes :
+```
+using System.Collections;
+using System.Collections.Generic;
+using System.Security.Permissions;
+using UnityEngine;
+
+//Gère les collisions entre le personnage et les objets présents
+public class Collisions : MonoBehaviour   
+{
+
+    public Material rouge;
+    public Material bleu;
+}
+```
+
+Créez deux fonctions, une "OnTriggerEnter" et une "OnTriggerExit" avec comme paramètre (Collider cube).
+
+La fonction Enter détecte quand une collision se produit, la fonction Exit détecte quand la collision s'arrête.
 
 
+```
+private void OnTriggerEnter(Collider cube)
+    {
+        
+    }
 
+    private void OnTriggerExit(Collider cube)
+    {
 
+    }
+```
 
+Le paramètre cube référence le cube qui sera touché
 
 

@@ -6,32 +6,19 @@ using UnityEngine;
 //Gère les collisions entre le personnage et les objets présents
 public class Collisions : MonoBehaviour   
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public Material rouge;
+    public Material bleu;
 
     private void OnTriggerEnter(Collider cube)
     {
         GameObject gameObjectCube = cube.gameObject;
-        Material caca;
-        caca = gameObjectCube.GetComponent<Renderer>().material;
-        caca.color = Color.red;
+        gameObjectCube.GetComponent<Renderer>().material = rouge;
     }
 
     private void OnTriggerExit(Collider cube)
     {
         GameObject gameObjectCube = cube.gameObject;
-        Material caca;
-        caca = gameObjectCube.GetComponent<Renderer>().material;
-        caca.color = Color.green;
+        gameObjectCube.GetComponent<Renderer>().material = bleu;
     }
 }
