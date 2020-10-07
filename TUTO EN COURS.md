@@ -90,7 +90,6 @@ using UnityEngine;
 //Gère les collisions entre le personnage et les objets présents
 public class Collisions : MonoBehaviour   
 {
-
     public Material rouge;
     public Material bleu;
 }
