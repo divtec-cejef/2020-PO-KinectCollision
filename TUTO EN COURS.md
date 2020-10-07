@@ -162,5 +162,7 @@ Il vous suffit maintenant de lancer le projet pour essayer de toucher les cubes.
 
 Il faudra sûrement déplacer les cubes pouvoir être capable de les atteindre.
 
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
+
 
 
