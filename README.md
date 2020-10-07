@@ -174,7 +174,7 @@ Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
 
 Avant de gérer les collisions il faut comprendre les collisions !
 
-Les cubes sont des "déclancheurs" (il font quelque chose s'ils sont touché ou non).
+Les cubes sont des "déclancheurs" (ils font quelque chose s'ils sont touché ou non).
 
 Tout ça se gère via un script.
 
