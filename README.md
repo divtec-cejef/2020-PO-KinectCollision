@@ -16,7 +16,7 @@ Projet qui a pour but de montrer comment installer un environnement kinect de A 
   - [Sources](#sources)
     - [Unity](#unity)
     - [Package(s) Unity](#packages-unity)
-- [Création du projet GelloWorld](#création-du-projet-gelloworld)
+- [Création du projet HelloWorld](#création-du-projet-helloworld)
 - [Projet HelloWorld](#projet-helloworld)
   - [Créer le gestionnaire kinect](#créer-le-gestionnaire-kinect)
   - [Créer les objets](#créer-les-objets)
@@ -98,12 +98,12 @@ Cette partie concerne l&#39;inversement de la position de l&#39;axe Z du personn
 - Free Matcap Shaders 1.4.0.0 : [https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221](https://assetstore.unity.com/packages/vfx/shaders/free-matcap-shaders-8221)
 - Mr. Rumen Filkov: [https://rfilkov.com/](https://rfilkov.com/)
 
-# Création du projet GelloWorld
+# Création du projet HelloWorld
 * Lancer Unity Hub
 * Créer un nouveau projet 3D
 * Une fois le projet créé, il devrait s'ouvrir
 * Directement aller dans "Edit" > "Preferences..."
-* Dans l'onglet "External Tool", choisir "Visual studio 2019 (community)" pour "External script editor", celà permet a Visual Studio d'intégrer des fonctions/complétions de Unity
+* Dans l'onglet "External Tool", choisir "Visual studio 2019 (community)" pour "External script editor", cela permet a Visual Studio d'intégrer des fonctions/complétions de Unity
 
     ![GitHub Logo](/img/External_tools.png)
 * Télécharger puis importer le [package pour kinect](https://assetstore.unity.com/packages/3d/characters/kinect-v2-examples-with-ms-sdk-18708 "Package Kinect")
@@ -115,49 +115,49 @@ Cette partie concerne l&#39;inversement de la position de l&#39;axe Z du personn
 
 Il faut d'abord importer le package kinect.
 
-Assurez-vous que votre projet est bien ouvert, puis exécuter *Kinect.2.0.1410.19000.unitypackage* présent dans le dossier *KinectForWindows_UnityPro_2.0.1410*
+Assurez-vous que votre projet est bien ouvert, puis exécutez *Kinect.2.0.1410.19000.unitypackage* présent dans le dossier *KinectForWindows_UnityPro_2.0.1410*
 
-Unity va vous proposer d'importer, donc importez.
+Unity va vous proposer d'importer, acceptez.
 
-Si une erreur survient vous proposant de continuer avec ou sans backup, appuyer simplement sur "I made backup".
+Si une erreur survient vous proposant de continuer avec ou sans backup, appuyer simplement sur "I have made a backup".
 
-Dans le dossier *KinectForWindows_UnityPro_2.0.1410* vous trouverez des dossier *GreenScreen* et *KinectView*, glissez-les dans votre dossier assets de votre projet
+Dans le dossier *KinectForWindows_UnityPro_2.0.1410* vous trouverez des dossiers *GreenScreen* et *KinectView*, glissez-les dans le dossier assets de votre projet
 
 ![GitHub Logo](/img/exemplehierarchie.png)
 
-Dans votre hiérarchie, créez un nouvelle object vide, nommez-le "BodySourceManager" (clique-droit dans la hiérarchie > create > Empty)
+Dans votre hiérarchie, créez un nouvel objet vide, nommez-le "BodySourceManager" (clique-droit dans la hiérarchie > create > Empty)
 
-sélectionnez cet objet, dans l'inspector > add component > recherchez le script "Body Source Manager" > ajoutez-le.
+Sélectionnez cet objet, dans l'inspector > add component > recherchez le script "Body Source Manager" > ajoutez-le.
 
-Si vous lancer le projet, la kinect devrait maintenant salumée (un rectangle blanc a côté de l'objectif + des rectangle rouge au milieu).
+Si vous lancez le projet, la kinect devrait maintenant s'allumer (un rectangle blanc a côté de l'objectif + des rectangles rouge au milieu).
 
-**➡️ Création du gestionnaire kinect temriné**
+**➡️ Création du gestionnaire kinect terminée**
 
 ## Créer les objets
 
-Pour cet exemple vous allez créez deux cubes de couleur bleu, dès que une des mains du joueur entre en contact avec un des cube, il devient rouge, et s'il enlève sa main, il redevient bleu.
+Pour cet exemple vous allez créer deux cubes de couleur bleu, dès qu'une des mains du joueur entre en contact avec un des cube, il devient rouge, et s'il enlève sa main, il redevient bleu.
 
-Créez un cubes (Clique droit dans la hérarchie > new 3D object > 3D Cube)
+Créez un cube (Clique droit dans la hérarchie > new 3D object > 3D Cube)
 
-Sélectionnez votre cube et dans l'inspecteur, cliquez sur "Add Component" > Box Collider et cochez "is Trigger" pour le définir comme "déclanché"
+Sélectionnez votre cube et dans l'inspecteur, cliquez sur "Add Component" > Box Collider et cochez "is Trigger" pour le définir comme "déclenché"
 
 ![Pscreen boxCollider component](/img/boxcollider.png)
 
-Dans le dossier "Assets", créez un nouveau dossier "Material", il contiendra les deux couleurs que le cube peu avoir.
+Dans le dossier "Assets", créez un nouveau dossier "Material", il contiendra les deux couleurs que le cube peut avoir.
 
 Clique droit dans le dossier "Material" > Create > Material, donnez lui une couleur bleu.
 
-Dupliquez le matérial bleu puis donnez lui la couleur rouge (n'oubliez pas de bien renommer vos nouveau material !).
+Dupliquez le matérial bleu puis donnez lui la couleur rouge (n'oubliez pas de bien renommer vos nouveaux materials !).
 
 Glissez votre nouveau material bleu sur votre cube précédemment créé, puis dupliquez votre cube.
 
-Vous avez maintenant deux cubes bleus, un sera à gauche, un à droite.
+Vous avez maintenant deux cubes bleus, un sera à gauche, un second à droite.
 
 ![Pscreen deux cubes bleus](/img/checkpoint1.png)
 
 Maintenant vous allez créer une sphère qui représentera une main.
 
-Dans votre hiérarchie > clique-droit > create > 3D sphère.
+Dans votre hiérarchie > clique-droit > create > 3D sphere.
 
 Nommez-la "main_gauche".
 
@@ -171,11 +171,11 @@ Décochez **Use Gravity** et cochez **Is Kinematic**
 
 Puis une dernière fois dans l'inspector de la sphère > Add component > script "Detect Joints".
 
-Ce script permet de faire le lien entre l'objet est ce qu'il est sensé représenter
+Ce script permet de faire le lien entre l'objet et ce qu'il est sensé représenter
 
 Ici notre sphère représentera la main gauche.
 
-Dans les paramètre du script Detect Joints, glissez votre objet bodySourceManager dans le paramètre Body Src Manager.
+Dans les paramètres du script Detect Joints, glissez votre objet bodySourceManager dans le paramètre Body Src Manager.
 
 Puis sélectionnez "Hand Left" dans le paramètre **Tracked Joints**
 
@@ -194,15 +194,15 @@ N'oubliez pas de changer le paramètre de **Tracked Joints** de cette nouvelle s
 
 Avant de gérer les collisions il faut comprendre les collisions !
 
-Les cubes sont des "déclancheurs" (ils font quelque chose s'ils sont touché ou non).
+Les cubes sont des "déclencheurs" (ils font quelque chose s'ils sont touchés ou non).
 
-Tout ça se gère via un script.
+Tout ce processus est géré par un script.
 
 Dans votre dossier "Assets", clique-droit > create > C# script et nommez-le "collision".
 
-Ouvrez-le (il devrait s'ouvrir avec visual studio !).
+Ouvrez-le (il devrait s'ouvrir avec Visual Studio !).
 
-Supprimez les fonction Start et Update.
+Supprimez les fonctions Start et Update.
 
 Créez deux variables qui représenteront les deux coloris des cubes :
 
@@ -241,7 +241,7 @@ Le paramètre cube référence le box collider du cube qui sera touché.
 
 Dans la fonction ```OnTriggerEnter```, nous allons changer la couleur du cube en rouge.
 
-On récupère pour ça le l'objet du collider détecté par la collision (donc le cube) pour pouvoir modifié son paramètre Material
+On récupère pour ça l'objet du collider détecté par la collision (donc le cube) pour pouvoir modifier son paramètre Material
 
 On attribue notre Material rouge au material du cube.
 
@@ -253,7 +253,7 @@ private void OnTriggerEnter(Collider cube)
     }
 ```
 
-Et lorsque la collision s'arrête, on remplace le Material du cube par notre Material bleu.
+Et lorsque la collision s'arrête, on remplace le material du cube par notre Material bleu.
 
 Donc dans la fonction ```OnTriggerExit``` :
 
