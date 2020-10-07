@@ -21,7 +21,6 @@ Projet qui a pour but de montrer comment installer un environnement kinect de A 
   - [Ajouter un squelette](#ajouter-un-squelette)
   - [Créer les objets](#créer-les-objets)
   - [Gérer les collisions](#gérer-les-collisions)
-  - [Autres](#autres)
 
 ## Environnement de développement
 
@@ -134,7 +133,7 @@ Vous pouvez le rendre invisible en décochant la case à côté de son nom pour 
 
 Si vous lancer votre projet, un personnage reproduisant vos mouvements devrait maintenant apparaître.
 
-**...Ajout du squelette terminé**
+**➡️ Ajout du squelette terminé**
 
 ## Créer les objets
 
@@ -168,7 +167,7 @@ Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
 
 ![Pscreen rigidBody component](/img/rigid.png)
 
-**...Création des objets terminée**
+**➡️ Création des objets terminée**
 
 ## Gérer les collisions
 
@@ -200,9 +199,9 @@ public class Collisions : MonoBehaviour
 }
 ```
 
-Créez deux fonctions, une "OnTriggerEnter" et une "OnTriggerExit" avec comme paramètre (Collider cube).
+Créez deux fonctions, une "OnTriggerEnter" et une "OnTriggerExit" avec comme paramètre ```(Collider cube)```.
 
-La fonction Enter détecte quand une collision se produit, la fonction Exit détecte quand la collision s'arrête.
+La fonction ```OnTriggerEnter``` détecte quand une collision se produit, la fonction ```OnTriggerExit``` détecte quand la collision s'arrête.
 
 
 ```C#
@@ -219,7 +218,7 @@ private void OnTriggerEnter(Collider cube)
 
 Le paramètre cube référence le box collider du cube qui sera touché.
 
-Dans la fonction OnTriggerEnter, nous allons changer la couleur du cube en rouge.
+Dans la fonction ```OnTriggerEnter```, nous allons changer la couleur du cube en rouge.
 
 On récupère pour ça le l'objet du collider détecté par la collision (donc le cube) pour pouvoir modifié son paramètre Material
 
@@ -234,6 +233,8 @@ private void OnTriggerEnter(Collider cube)
 ```
 
 Et lorsque la collision s'arrête, on remplace le Material du cube par notre Material bleu.
+
+Donc dans la fonction ```OnTriggerExit``` :
 
 ```C#
 private void OnTriggerExit(Collider cube)
@@ -259,12 +260,10 @@ Glissez maintenant vos Material bleu et rouge dans les paramètre bleu et rouge 
 
 Faite exactement la même chose pour le Right_Wrist du robot.
 
-**...Gestion des collisions terminée**
+**➡️ Gestion des collisions terminée**
 
 Il vous suffit maintenant de lancer le projet pour essayer de toucher les cubes.
 
 Il faudra sûrement déplacer les cubes pouvoir être capable de les atteindre.
 
-## Autres
-
-- Fond étoilé : [https://unsplash.com/photos/qVotvbsuM\_c](https://unsplash.com/photos/qVotvbsuM_c)
+**➡️ Projet HelloWorld terminé**
