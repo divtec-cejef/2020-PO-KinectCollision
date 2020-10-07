@@ -70,7 +70,7 @@ Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
 
 Avant de gérer les collisions il faut comprendre les collisions !
 
-les poignets sont des "déclancheurs" (c'est eux qui vont toucher des choses) et les cubes sont des "déclanchés" (il font quelque chose s'ils sont touché ou non).
+Les cubes sont des "déclancheurs" (il font quelque chose s'ils sont touché ou non).
 
 Tout ça se gère via un script.
 
@@ -81,7 +81,8 @@ Ouvrez-le (il devrait s'ouvrir avec visual studio !).
 Supprimez les fonction Start et Update.
 
 Créez deux variables qui représenteront les deux coloris des cubes :
-```
+
+```C#
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Permissions;
@@ -100,7 +101,7 @@ Créez deux fonctions, une "OnTriggerEnter" et une "OnTriggerExit" avec comme pa
 La fonction Enter détecte quand une collision se produit, la fonction Exit détecte quand la collision s'arrête.
 
 
-```
+```C#
 private void OnTriggerEnter(Collider cube)
     {
         
@@ -112,6 +113,53 @@ private void OnTriggerEnter(Collider cube)
     }
 ```
 
-Le paramètre cube référence le cube qui sera touché
+Le paramètre cube référence le box collider du cube qui sera touché.
+
+Dans la fonction OnTriggerEnter, nous allons changer la couleur du cube en rouge.
+
+On récupère pour ça le l'objet du collider détecté par la collision (donc le cube) pour pouvoir modifié son paramètre Material
+
+On attribue notre Material rouge au material du cube.
+
+```C#
+private void OnTriggerEnter(Collider cube)
+    {
+        GameObject gameObjectCube = cube.gameObject;
+        gameObjectCube.GetComponent<Renderer>().material = rouge;
+    }
+```
+
+Et lorsque la collision s'arrête, on remplace le Material du cube par notre Material bleu.
+
+```C#
+private void OnTriggerExit(Collider cube)
+    {
+        GameObject gameObjectCube = cube.gameObject;
+        gameObjectCube.GetComponent<Renderer>().material = bleu;
+    }
+```
+
+Maintenant il faut faire le lien entre vos deux variables Material et vos deux Material.
+
+Pour se faire : sauvegarder votre script (CTRL+S) puis fermer visual studio.
+
+Sélectionnez votre script, deux paramètres sont maintenant disponnibles pour votre script : bleu et rouge.
+
+**Ajouter photo des deux paramètre sur le script**
+
+Glissez ce script sur le Left_Wrist du robot, lorsque vous sélectionnez Left_Wrist du robot, le script devrait apparaître dans l'inspector.
+
+Glissez maintenant vos Material bleu et rouge dans les paramètre bleu et rouge du script collision présent sur Left_Wrist du robot.
+
+**Ajouter photo du script sur Left_Wrist avec les deux paramètre rempli**
+
+Faite exactement la même chose pour le Right_Wrist du robot.
+
+**Gestion des collisions terminée**
+
+Il vous suffit maintenant de lancer le projet pour essayer de toucher les cubes.
+
+Il faudra sûrement déplacer les cubes pouvoir être capable de les atteindre.
+
 
 
