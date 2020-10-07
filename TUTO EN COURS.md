@@ -15,21 +15,21 @@
 
 Il faut récupérer le squelette présent dans la démo du package précédement installé en ouvrant la scene "KinectAvatarsDemo4" présente dans Assets > K2Exemples > KinectDemos > AvatarsDemo
 
-![GitHub Logo](/img/KinectAvatarsDemo4.png)
+![Pscreen de kinectAvatarDemo4](/img/KinectAvatarsDemo4.png)
 
 Copier l'objet "KinectController" et le coller dans votre scène (pour revenir à votre scene de départ > File > Open Scene > Scenes > SampleScene.unity)
 Pour ajouter un personnage a votre squelette, cliquez sur l'objet "KinectController", dans le script "User Avatar Matcher" séléctionnez le personnage voulu dans "Avatar Model" (ici je choisis "Robot")
 
-![GitHub Logo](/img/choisirSkin.png)
+![Pscreen choix du skin](/img/choisirSkin.png)
 
 Double-cliquez sur l'élément Robot dans "Avatar Model" pour trouver sa source et glissez le dans votre hiérarchie
 
-![GitHub Logo](/img/elementhierarchie.png)
+![Pscreen hiérarchie](/img/elementhierarchie.png)
 
 Ce nouvel object Robot vous permettra de gérer les futures collisions.
 Vous pouvez le rendre invisible en décochant la case à côté de son nom pour évitez qui vous dérange lors des phase de jeu
 
-![GitHub Logo](/img/uncheck.png)
+![Pscreen décocher object](/img/uncheck.png)
 
 Si vous lancer votre projet, un personnage reproduisant vos mouvements devrait maintenant apparaître.
 
@@ -41,7 +41,7 @@ Créez un cubes (Clique droit dans la hérarchie > new 3D object > 3D Cube)
 
 Sélectionnez votre cube et dans l'inspecteur, cliquez sur "Add Component" > Box Collider et cochez "is Trigger" pour le définir comme "déclanché"
 
-![GitHub Logo](/img/boxcollider.png)
+![Pscreen boxCollider component](/img/boxcollider.png)
 
 Dans le dossier "Assets", créez un nouveau dossier "Material", il contiendra les deux couleurs que le cube peu avoir.
 
@@ -53,17 +53,17 @@ Glissez votre nouveau material bleu sur votre cube précédemment créé, puis d
 
 Vous avez maintenant deux cubes bleus, un sera à gauche, un à droite.
 
-![GitHub Logo](/img/checkpoint1.png)
+![Pscreen deux cubes bleus](/img/checkpoint1.png)
 
 vous allez ensuite donner un box collider au deux poignet du Robot
 
 pour ce faire, sélectionner le poignet (wrist) du Robot et Add component > Box Collider.
 
-![GitHub Logo](/img/robotwrist.png)
+![Pscreen wrist du robot](/img/robotwrist.png)
 
 Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
 
-![GitHub Logo](/img/rigid.png)
+![Pscreen rigidBody component](/img/rigid.png)
 
 **Création des objets terminée**
 
@@ -146,13 +146,13 @@ Pour se faire : sauvegarder votre script (CTRL+S) puis fermer visual studio.
 
 Sélectionnez votre script, deux paramètres sont maintenant disponnibles pour votre script : bleu et rouge.
 
-**( *Ajouter photo des deux paramètres sur le script* )**
+![Pscreen nouveau param script](/img/scriptparam.png)
 
 Glissez ce script sur le Left_Wrist du robot, lorsque vous sélectionnez Left_Wrist du robot, le script devrait apparaître dans l'inspector.
 
 Glissez maintenant vos Material bleu et rouge dans les paramètre bleu et rouge du script collision présent sur Left_Wrist du robot.
 
-**( *Ajouter photo du script sur Left_Wrist avec les deux paramètre rempli* )**
+![Pscreen param du script rempli](/img/paramscript.png)
 
 Faite exactement la même chose pour le Right_Wrist du robot.
 
