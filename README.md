@@ -18,7 +18,7 @@ Projet qui a pour but de montrer comment installer un environnement kinect de A 
     - [Package(s) Unity](#packages-unity)
 - [Création du projet GelloWorld](#création-du-projet-gelloworld)
 - [Projet HelloWorld](#projet-helloworld)
-  - [Ajouter un squelette](#ajouter-un-squelette)
+  - [Créer le gestionnaire kinect](#créer-le-gestionnaire-kinect)
   - [Créer les objets](#créer-les-objets)
   - [Gérer les collisions](#gérer-les-collisions)
 
@@ -111,29 +111,13 @@ Cette partie concerne l&#39;inversement de la position de l&#39;axe Z du personn
     **La création du projet est terminée**
 
 # Projet HelloWorld
-## Ajouter un squelette
+## Créer le gestionnaire kinect
 
-Il faut récupérer le squelette présent dans la démo du package précédement installé en ouvrant la scene "KinectAvatarsDemo4" présente dans Assets > K2Exemples > KinectDemos > AvatarsDemo
 
-![Pscreen de kinectAvatarDemo4](/img/KinectAvatarsDemo4.png)
+Dans votre hiérarchie, créez un nouvelle object vide (clique-droit dans la hiérarchie > create > Empty)
 
-Copier l'objet "KinectController" et le coller dans votre scène (pour revenir à votre scene de départ > File > Open Scene > Scenes > SampleScene.unity)
-Pour ajouter un personnage a votre squelette, cliquez sur l'objet "KinectController", dans le script "User Avatar Matcher" séléctionnez le personnage voulu dans "Avatar Model" (ici je choisis "Robot")
 
-![Pscreen choix du skin](/img/choisirSkin.png)
-
-Double-cliquez sur l'élément Robot dans "Avatar Model" pour trouver sa source et glissez le dans votre hiérarchie
-
-![Pscreen hiérarchie](/img/elementhierarchie.png)
-
-Ce nouvel object Robot vous permettra de gérer les futures collisions.
-Vous pouvez le rendre invisible en décochant la case à côté de son nom pour évitez qui vous dérange lors des phase de jeu
-
-![Pscreen décocher object](/img/uncheck.png)
-
-Si vous lancer votre projet, un personnage reproduisant vos mouvements devrait maintenant apparaître.
-
-**➡️ Ajout du squelette terminé**
+**➡️ Création du gestionnaire kinect temriné**
 
 ## Créer les objets
 
