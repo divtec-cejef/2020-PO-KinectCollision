@@ -115,7 +115,7 @@ Cette partie concerne l&#39;inversement de la position de l&#39;axe Z du personn
 
 Il faut d'abord importer le package kinect.
 
-Assurez-vous que votre projet est bien ouvert, puis exécutez *Kinect.2.0.1410.19000.unitypackage* présent dans le dossier *KinectForWindows_UnityPro_2.0.1410*
+Assurez-vous que votre projet est bien ouvert, puis exécutez *Kinect.2.0.1410.19000.unitypackage* présent dans le dossier [*KinectForWindows_UnityPro_2.0.1410*](/KinectForWindows_UnityPro_2.0.1410)
 
 Unity va vous proposer d'importer, acceptez.
 
@@ -123,7 +123,7 @@ Si une erreur survient vous proposant de continuer avec ou sans backup, appuyer 
 
 Dans le dossier *KinectForWindows_UnityPro_2.0.1410* vous trouverez des dossiers *GreenScreen* et *KinectView*, glissez-les dans le dossier assets de votre projet
 
-![GitHub Logo](/img/exemplehierarchie.png)
+![Pscreen hiérarchie](/img/exemplehierarchie.png)
 
 Dans votre hiérarchie, créez un nouvel objet vide, nommez-le "BodySourceManager" (clique-droit dans la hiérarchie > create > Empty)
 
