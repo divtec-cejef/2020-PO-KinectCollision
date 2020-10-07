@@ -1,6 +1,5 @@
 # Création d'un projet qui utilise la Kinect
-Projet qui a pour but de montrer comment installer un environnement kinect de A à Z et ensuite créer un petit projet gérant la collision d'un squelette.
-
+Projet qui a pour but de montrer comment installer un environnement kinect de A à Z et ensuite créer un petit projet gérant la collision entre objets.
 ## Sommaire
 - [Création d'un projet qui utilise la Kinect](#création-dun-projet-qui-utilise-la-kinect)
   - [Sommaire](#sommaire)
