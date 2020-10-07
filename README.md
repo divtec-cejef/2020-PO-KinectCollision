@@ -113,9 +113,23 @@ Cette partie concerne l&#39;inversement de la position de l&#39;axe Z du personn
 # Projet HelloWorld
 ## Créer le gestionnaire kinect
 
+Il faut d'abord importer le package kinect.
 
-Dans votre hiérarchie, créez un nouvelle object vide (clique-droit dans la hiérarchie > create > Empty)
+Assurez-vous que votre projet est bien ouvert, puis exécuter *Kinect.2.0.1410.19000.unitypackage* présent dans le dossier *KinectForWindows_UnityPro_2.0.1410*
 
+Unity va vous proposer d'importer, donc importez.
+
+Si une erreur survient vous proposant de continuer avec ou sans backup, appuyer simplement sur "I made backup".
+
+Dans le dossier *KinectForWindows_UnityPro_2.0.1410* vous trouverez des dossier *GreenScreen* et *KinectView*, glissez-les dans votre dossier assets de votre projet
+
+![GitHub Logo](/img/exemplehierarchie.png)
+
+Dans votre hiérarchie, créez un nouvelle object vide, nommez-le "BodySourceManager" (clique-droit dans la hiérarchie > create > Empty)
+
+sélectionnez cet objet, dans l'inspector > add component > recherchez le script "Body Source Manager" > ajoutez-le.
+
+Si vous lancer le projet, la kinect devrait maintenant salumée (un rectangle blanc a côté de l'objectif + des rectangle rouge au milieu).
 
 **➡️ Création du gestionnaire kinect temriné**
 
@@ -141,15 +155,38 @@ Vous avez maintenant deux cubes bleus, un sera à gauche, un à droite.
 
 ![Pscreen deux cubes bleus](/img/checkpoint1.png)
 
-vous allez ensuite donner un box collider au deux poignet du Robot
+Maintenant vous allez créer une sphère qui représentera une main.
 
-pour ce faire, sélectionner le poignet (wrist) du Robot et Add component > Box Collider.
+Dans votre hiérarchie > clique-droit > create > 3D sphère.
 
-![Pscreen wrist du robot](/img/robotwrist.png)
+Nommez-la "main_gauche".
 
-Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
+Dans l'inspector de la sphère > Add component > Sphere collider.
 
-![Pscreen rigidBody component](/img/rigid.png)
+Le radius devrait se régler automatiquement.
+
+A nouveau dans l'inspector de la sphère > Add component > RigidBody.
+
+Décochez **Use Gravity** et cochez **Is Kinematic**
+
+Puis une dernière fois dans l'inspector de la sphère > Add component > script "Detect Joints".
+
+Ce script permet de faire le lien entre l'objet est ce qu'il est sensé représenter
+
+Ici notre sphère représentera la main gauche.
+
+Dans les paramètre du script Detect Joints, glissez votre objet bodySourceManager dans le paramètre Body Src Manager.
+
+Puis sélectionnez "Hand Left" dans le paramètre **Tracked Joints**
+
+Voilà à quoi devrait ressembler l'inspector de votre sphère :
+
+![Pscreen inspector](/img/mainscreen.png)
+
+Dupliquez votre sphère pour en faire une main droite.
+
+N'oubliez pas de changer le paramètre de **Tracked Joints** de cette nouvelle sphère en "Hand Right" et de renommer l'objet en "main_droite".
+
 
 **➡️ Création des objets terminée**
 
@@ -236,13 +273,13 @@ Sélectionnez votre script, deux paramètres sont maintenant disponnibles pour v
 
 ![Pscreen nouveau param script](/img/scriptparam.png)
 
-Glissez ce script sur le Left_Wrist du robot, lorsque vous sélectionnez Left_Wrist du robot, le script devrait apparaître dans l'inspector.
+Glissez ce script sur la sphère main_gauche, lorsque vous sélectionnez le script Collision sur la sphère, le script devrait apparaître dans l'inspector.
 
-Glissez maintenant vos Material bleu et rouge dans les paramètre bleu et rouge du script collision présent sur Left_Wrist du robot.
+Ajoutez vos Material bleu et rouge dans les paramètres du script.
 
-![Pscreen param du script rempli](/img/paramscript.png)
+![Pscreen param du script rempli](/img/maingauche.png)
 
-Faite exactement la même chose pour le Right_Wrist du robot.
+Faite exactement la même chose pour la sphère main_droite du robot.
 
 **➡️ Gestion des collisions terminée**
 

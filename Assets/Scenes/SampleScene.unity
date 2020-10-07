@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &117738157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100096, guid: 7c2275071e631c74294c10c9bc18232a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2136843178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &153531645
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243b01ef97e8ecb40b0d023858d3aa46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarModel: {fileID: 100096, guid: 7c2275071e631c74294c10c9bc18232a, type: 3}
+  avatarModel: {fileID: 117738157}
   smoothFactor: 10
   posRelativeToCamera: {fileID: 0}
   mirroredMovement: 1
