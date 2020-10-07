@@ -146,13 +146,13 @@ Pour se faire : sauvegarder votre script (CTRL+S) puis fermer visual studio.
 
 Sélectionnez votre script, deux paramètres sont maintenant disponnibles pour votre script : bleu et rouge.
 
-***Ajouter photo des deux paramètre sur le script***
+## ***Ajouter photo des deux paramètre sur le script***
 
 Glissez ce script sur le Left_Wrist du robot, lorsque vous sélectionnez Left_Wrist du robot, le script devrait apparaître dans l'inspector.
 
 Glissez maintenant vos Material bleu et rouge dans les paramètre bleu et rouge du script collision présent sur Left_Wrist du robot.
 
-***Ajouter photo du script sur Left_Wrist avec les deux paramètre rempli***
+## ***Ajouter photo du script sur Left_Wrist avec les deux paramètre rempli***
 
 Faite exactement la même chose pour le Right_Wrist du robot.
 
@@ -161,8 +161,3 @@ Faite exactement la même chose pour le Right_Wrist du robot.
 Il vous suffit maintenant de lancer le projet pour essayer de toucher les cubes.
 
 Il faudra sûrement déplacer les cubes pouvoir être capable de les atteindre.
-
-Some Markdown text with <span style="color:blue">some *blue* text</span>.
-
-
-
