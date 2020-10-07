@@ -282,6 +282,8 @@ Faite exactement la même chose pour la sphère main_droite du robot.
 
 **➡️ Gestion des collisions terminée**
 
+## Testes
+
 Il vous suffit maintenant de lancer le projet pour essayer de toucher les cubes.
 
 Il faudra sûrement déplacer les cubes pour être capable de les atteindre (ici, ils ont été étirés).
