@@ -33,6 +33,8 @@ Vous pouvez le rendre invisible en décochant la case à côté de son nom pour 
 
 Si vous lancer votre projet, un personnage reproduisant vos mouvements devrait maintenant apparaître.
 
+**...Ajout du squelette terminé**
+
 ## Créer les objets
 
 Pour cet exemple vous allez créez deux cubes de couleur bleu, dès que une des mains du joueur entre en contact avec un des cube, il devient rouge, et s'il enlève sa main, il redevient bleu.
@@ -65,7 +67,7 @@ Ajoutez également un RigidBody (décochez use gravity et cochez is Kinematic).
 
 ![Pscreen rigidBody component](/img/rigid.png)
 
-**Création des objets terminée**
+**...Création des objets terminée**
 
 ## Gérer les collisions
 
@@ -156,7 +158,7 @@ Glissez maintenant vos Material bleu et rouge dans les paramètre bleu et rouge 
 
 Faite exactement la même chose pour le Right_Wrist du robot.
 
-**Gestion des collisions terminée**
+**...Gestion des collisions terminée**
 
 Il vous suffit maintenant de lancer le projet pour essayer de toucher les cubes.
 
